@@ -157,6 +157,7 @@ const PROJECTS = [
   },
   {
     id: "zedrin",
+    repo: "https://github.com/Patoxzor/zedrin-pagamentos-showcase",
     feat: false,
     tag: { pt: "Backend · Pagamentos", en: "Backend · Payments" }, tagAlt: true,
     name: { pt: "Zedrin Pagamentos (PIX)", en: "Zedrin Payments (PIX)" },
