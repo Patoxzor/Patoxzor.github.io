@@ -1,6 +1,6 @@
 # Portfólio — Carlos Azevedo
 
-Site de portfólio estático (HTML + CSS + JavaScript puro, **sem build step**), bilíngue **PT/EN**, tema **dark tech**, posicionamento **Backend / Python Developer**.
+Site de portfólio estático (HTML + CSS + JavaScript puro, **sem build step**), bilíngue **PT/EN**, tema **dark tech**, posicionamento **Software Developer**.
 
 Pronto para publicar no GitHub Pages, Vercel, Netlify ou qualquer hospedagem estática.
 

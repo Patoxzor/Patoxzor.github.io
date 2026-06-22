@@ -7,7 +7,7 @@
 const I18N = {
   pt: {
     "nav.about": "Sobre", "nav.skills": "Skills", "nav.projects": "Projetos", "nav.contact": "Contato",
-    "hero.eyebrow": "Backend / Python Developer",
+    "hero.eyebrow": "Software Developer",
     "hero.tagline": "Desafiador, sempre em busca de transformar problemas em soluções por meio da programação.",
     "hero.loc": "Maceió/AL — Brasil", "hero.exp": "2 anos de experiência",
     "hero.contact": "Entrar em contato",
@@ -32,7 +32,7 @@ const I18N = {
   },
   en: {
     "nav.about": "About", "nav.skills": "Skills", "nav.projects": "Projects", "nav.contact": "Contact",
-    "hero.eyebrow": "Backend / Python Developer",
+    "hero.eyebrow": "Software Developer",
     "hero.tagline": "A problem-solver at heart — I turn real-world problems into software.",
     "hero.loc": "Maceió/AL — Brazil", "hero.exp": "2 years of experience",
     "hero.contact": "Get in touch",
