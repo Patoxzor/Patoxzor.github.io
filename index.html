@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Azevedo — Backend / Python Developer</title>
+  <meta name="description" content="Carlos Alberto C. de Azevedo Filho — Backend / Python Developer. Portfólio de APIs, automação, integrações de pagamento e sistemas full-stack em produção." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <a href="#top" class="brand"><span class="brk">&lt;</span>CA<span class="brk">/&gt;</span></a>
+    <nav class="nav-links">
+      <a href="#about" data-i18n="nav.about">Sobre</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" data-i18n="nav.projects">Projetos</a>
+      <a href="#contact" data-i18n="nav.contact">Contato</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Trocar idioma">
+      <span class="lang-cur">PT</span><span class="lang-sep">/</span><span class="lang-oth">EN</span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="blink">▍</span>&nbsp;<span data-i18n="hero.eyebrow">Backend / Python Developer</span></p>
+      <h1 class="hero-name">Carlos Alberto<br /><span class="grad">C. de Azevedo Filho</span></h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">Desafiador, sempre em busca de transformar problemas em soluções por meio da programação.</p>
+      <p class="hero-meta">
+        <span>📍 <span data-i18n="hero.loc">Maceió/AL — Brasil</span></span>
+        <span class="sep">•</span><span data-i18n="hero.exp">2 anos de experiência</span>
+        <span class="sep">•</span><span data-i18n="hero.remote">Aberto a remoto</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:calos.caf@gmail.com">✉&nbsp; <span data-i18n="hero.contact">Entrar em contato</span></a>
+        <a class="btn btn-ghost" href="https://github.com/Patoxzor" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/azevedoocarlos/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>7</b><span data-i18n="stat.projects">projetos reais</span></div>
+        <div class="stat"><b>5+</b><span data-i18n="stat.langs">linguagens</span></div>
+        <div class="stat"><b>4</b><span data-i18n="stat.db">bancos de dados</span></div>
+        <div class="stat"><b>3</b><span data-i18n="stat.platforms">plataformas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">01</span><h2 data-i18n="about.title">Sobre mim</h2></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+          <p data-i18n="about.p3"></p>
+        </div>
+        <aside class="about-card">
+          <p class="ac-title" data-i18n="about.facts">Resumo rápido</p>
+          <ul class="ac-list">
+            <li><span data-i18n="about.f1k">Foco</span><b data-i18n="about.f1v">Backend &amp; Python</b></li>
+            <li><span data-i18n="about.f2k">Local</span><b data-i18n="about.f2v">Maceió/AL — Brasil</b></li>
+            <li><span data-i18n="about.f3k">Idiomas</span><b data-i18n="about.f3v">Português · Inglês técnico</b></li>
+            <li><span data-i18n="about.f4k">Modelo</span><b data-i18n="about.f4v">Remoto / Híbrido</b></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">02</span><h2 data-i18n="skills.title">Habilidades técnicas</h2></div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">03</span><h2 data-i18n="projects.title">Projetos</h2></div>
+      <p class="sec-sub" data-i18n="projects.sub">Clique em um projeto para ver o problema, a arquitetura e as decisões técnicas.</p>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">04</span><h2 data-i18n="contact.title">Vamos conversar</h2></div>
+      <p class="sec-sub" data-i18n="contact.lead">Aberto a oportunidades de backend, Python e full-stack — no Brasil ou remotas internacionais.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:calos.caf@gmail.com">
+          <span class="ci">✉</span><span class="ck">Email</span><span class="cv">calos.caf@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Patoxzor" target="_blank" rel="noopener">
+          <span class="ci">⌥</span><span class="ck">GitHub</span><span class="cv">github.com/Patoxzor</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/azevedoocarlos/" target="_blank" rel="noopener">
+          <span class="ci">in</span><span class="ck">LinkedIn</span><span class="cv">azevedoocarlos</span>
+        </a>
+        <a class="contact-card" href="https://wa.me/5582988261755" target="_blank" rel="noopener">
+          <span class="ci">☎</span><span class="ck">WhatsApp</span><span class="cv">+55 82 98826-1755</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Carlos Azevedo · <span data-i18n="footer.built">Construído com HTML, CSS e JavaScript</span></p>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
