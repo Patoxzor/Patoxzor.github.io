@@ -164,8 +164,13 @@ h1, h2, h3 { line-height: 1.12; letter-spacing: -0.02em; }
 .pcard .pdesc { color: var(--text-dim); font-size: 0.96rem; margin-bottom: 18px; flex-grow: 1; }
 .ptech { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
 .ptech li { font-family: var(--mono); font-size: 0.72rem; color: var(--text-mute); border: 1px solid var(--border); padding: 3px 9px; border-radius: 6px; }
+.pfoot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .pmore { font-family: var(--mono); color: var(--accent); font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
 .pcard:hover .pmore { gap: 11px; }
+.prepo { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; color: var(--text-dim); border: 1px solid var(--border); padding: 5px 11px; border-radius: 7px; transition: color .15s, border-color .15s, background .15s; }
+.prepo:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.modal-repo { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.82rem; font-weight: 600; color: #062018; background: var(--accent); padding: 9px 16px; border-radius: 8px; margin-bottom: 24px; transition: transform .12s, box-shadow .2s; }
+.modal-repo:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(94,234,212,0.3); }
 
 /* ============ MODAL ============ */
 .modal-overlay {

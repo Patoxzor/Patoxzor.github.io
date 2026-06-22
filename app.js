@@ -28,7 +28,8 @@ const I18N = {
     "contact.lead": "Aberto a oportunidades de backend, Python e full-stack — no Brasil ou remotas internacionais.",
     "footer.built": "Construído com HTML, CSS e JavaScript",
     "modal.problem": "Problema", "modal.solution": "Solução", "modal.arch": "Arquitetura",
-    "modal.decisions": "Decisões técnicas", "modal.challenges": "Desafios", "modal.more": "Ver detalhes"
+    "modal.decisions": "Decisões técnicas", "modal.challenges": "Desafios", "modal.more": "Ver detalhes",
+    "modal.repo": "Ver showcase no GitHub", "card.repo": "Showcase"
   },
   en: {
     "nav.about": "About", "nav.skills": "Skills", "nav.projects": "Projects", "nav.contact": "Contact",
@@ -53,7 +54,8 @@ const I18N = {
     "contact.lead": "Open to backend, Python and full-stack roles — in Brazil or international remote.",
     "footer.built": "Built with HTML, CSS and JavaScript",
     "modal.problem": "Problem", "modal.solution": "Solution", "modal.arch": "Architecture",
-    "modal.decisions": "Technical decisions", "modal.challenges": "Challenges", "modal.more": "View details"
+    "modal.decisions": "Technical decisions", "modal.challenges": "Challenges", "modal.more": "View details",
+    "modal.repo": "View showcase on GitHub", "card.repo": "Showcase"
   }
 };
 
@@ -71,6 +73,7 @@ const SKILLS = [
 const PROJECTS = [
   {
     id: "portal_mix",
+    repo: "https://github.com/Patoxzor/portal-mix-showcase",
     feat: true,
     tag: { pt: "Full-stack · SaaS", en: "Full-stack · SaaS" }, tagAlt: false,
     name: { pt: "Portal de Contracheque & DIRF (multi-tenant)", en: "Payslip & Tax-Report Portal (multi-tenant)" },
@@ -112,6 +115,7 @@ const PROJECTS = [
   },
   {
     id: "patxoken",
+    repo: "https://github.com/Patoxzor/patxoken-showcase",
     feat: false,
     tag: { pt: "Full-stack · Python", en: "Full-stack · Python" }, tagAlt: false,
     name: { pt: "Patxoken — Gerenciador de Contas", en: "Patxoken — Account Manager" },
@@ -194,6 +198,7 @@ const PROJECTS = [
   },
   {
     id: "tibiacoin",
+    repo: "https://github.com/Patoxzor/tibia-coin-monitoring-showcase",
     feat: false,
     tag: { pt: "Backend · Node.js", en: "Backend · Node.js" }, tagAlt: true,
     name: { pt: "Tibia Coin Monitoring (verificação de pagamento)", en: "Tibia Coin Monitoring (payment verification)" },
@@ -235,6 +240,7 @@ const PROJECTS = [
   },
   {
     id: "importa_igps",
+    repo: "https://github.com/Patoxzor/importa-igps-showcase",
     feat: false,
     tag: { pt: "Desktop · ETL", en: "Desktop · ETL" }, tagAlt: false,
     name: { pt: "Importa IGPS — ETL de folha de pagamento", en: "Importa IGPS — Payroll ETL" },
@@ -276,6 +282,7 @@ const PROJECTS = [
   },
   {
     id: "appesocial",
+    repo: "https://github.com/Patoxzor/appesocial-showcase",
     feat: false,
     tag: { pt: "Desktop · Dados fiscais", en: "Desktop · Tax data" }, tagAlt: false,
     name: { pt: "AppeSocial — Processador de eSocial", en: "AppeSocial — eSocial Processor" },
@@ -317,6 +324,7 @@ const PROJECTS = [
   },
   {
     id: "patxoken_mobile",
+    repo: "https://github.com/Patoxzor/patxoken-mobile-showcase",
     feat: false,
     tag: { pt: "Mobile · Flutter", en: "Mobile · Flutter" }, tagAlt: true,
     name: { pt: "Patxoken Mobile (Android/iOS)", en: "Patxoken Mobile (Android/iOS)" },
@@ -397,10 +405,13 @@ function renderProjects() {
       <h3>${p.name[lang]}</h3>
       <p class="pdesc">${p.desc[lang]}</p>
       <ul class="ptech">${p.tech.slice(0, 6).map(t => `<li>${t}</li>`).join("")}</ul>
-      <span class="pmore">${I18N[lang]["modal.more"]} →</span>
+      <div class="pfoot">
+        <span class="pmore">${I18N[lang]["modal.more"]} →</span>
+        ${p.repo ? `<a class="prepo" href="${p.repo}" target="_blank" rel="noopener">⌥ ${I18N[lang]["card.repo"]} ↗</a>` : ""}
+      </div>
     </article>`).join("");
   grid.querySelectorAll(".pcard").forEach(card => {
-    card.addEventListener("click", () => openModal(card.getAttribute("data-id")));
+    card.addEventListener("click", e => { if (e.target.closest("a.prepo")) return; openModal(card.getAttribute("data-id")); });
     card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card.getAttribute("data-id")); } });
   });
 }
@@ -417,6 +428,7 @@ function openModal(id) {
     <h3>${p.name[lang]}</h3>
     <p class="modal-tag">${p.tag[lang]}</p>
     <ul class="modal-stack">${p.tech.map(t => `<li>${t}</li>`).join("")}</ul>
+    ${p.repo ? `<a class="modal-repo" href="${p.repo}" target="_blank" rel="noopener">⌥ ${d["modal.repo"]} ↗</a>` : ""}
     <div class="mblock"><h4>${d["modal.problem"]}</h4><p>${p.problem[lang]}</p></div>
     <div class="mblock"><h4>${d["modal.solution"]}</h4><p>${p.solution[lang]}</p></div>
     <div class="mblock"><h4>${d["modal.arch"]}</h4><p>${p.arch[lang]}</p></div>
