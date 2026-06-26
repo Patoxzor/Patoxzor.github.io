@@ -1,0 +1,13 @@
+# Imagens de trabalho (screenshots, insumos dos showcases) — NÃO versionar.
+# Vários desses arquivos contêm dados pessoais reais (CPF, nomes, e-mails);
+# este repositório é público (GitHub Pages), então nada de imagem entra no commit.
+# O site é só HTML/CSS/JS. Se um dia precisar de uma imagem no site, libere-a
+# explicitamente com: git add -f caminho/da/imagem.ext
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# Crops temporários de diagnóstico
+_*.png
